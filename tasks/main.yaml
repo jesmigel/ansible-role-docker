@@ -1,4 +1,7 @@
 ---
+- name: Add official docker apt repo
+  import_tasks: apt.yaml
+
 - name: Install Binaries
   import_tasks: install.yaml
 
