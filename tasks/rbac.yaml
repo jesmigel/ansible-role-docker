@@ -4,14 +4,14 @@
     name: "{{ item.user_id }}"
     shell: "{{ item.user_shell }}"
     groups: "{{ docker_group }}"
-    append: yes
+    append: true
   loop: "{{  docker_users  }}"
   tags:
-  - docker
-  - docker_rbac
+    - docker
+    - docker_rbac
 
 - name: reset ssh connection to refresh group
   meta: reset_connection
   tags:
-  - docker
-  - docker_rbac
+    - docker
+    - docker_rbac

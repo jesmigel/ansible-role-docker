@@ -5,17 +5,13 @@
     keyring: "{{ docker_file_gpg_key }}"
     state: present
   tags:
-  - docker
-  - docker_repo
-
-# - name: Add the official HashiCorp Linux repository.
-#   ansible.builtin.shell:
-#     cmd: apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    - docker
+    - docker_repo
 
 - name: Add the official Docker Linux repository.
   ansible.builtin.apt_repository:
     repo: "deb [arch=amd64 signed-by={{ docker_file_gpg_key }}] {{ docker_apt_repo }} {{ ansible_facts.distribution_release }} main"
     state: present
   tags:
-  - docker
-  - docker_repo
+    - docker
+    - docker_repo
