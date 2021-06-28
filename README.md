@@ -1,4 +1,7 @@
 # ansible-role-docker
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![CI](https://github.com/jesmigel/ansible-role-docker/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/jesmigel/ansible-role-docker/actions/workflows/build.yaml)
+
 Ansible role used to set up a docker host.
 
 ### References
