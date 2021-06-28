@@ -3,10 +3,9 @@
   include_role:
     name: common
     tasks_from: apt.yaml
-    apply:
-      tags:
-        - docker
-        - docker_apt
   vars:
     binaries: "{{ docker_binaries }}"
     handler_list: "{{ docker_handler_list }}"
+  tags:
+    - docker
+    - docker_apt
